@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>I_CRUD</title>
+    <title>I_services</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,7 +19,7 @@
 
       <!-- Name Title -->
 
-      <h1>I_CRUD</h1>
+      <h1>I_services</h1>
 
       <!-- Type and Stereotype -->
 
@@ -47,10 +47,10 @@
           <span class="label label-info"><a href='aa6e531e1e98c7a0fa8394085a57f7a6.html'><span class='node-icon staruml-icon icon-UMLPackage'></span>domaine</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='6e3080ef6d449fb57bbb36076e41e3de.html'><span class='node-icon staruml-icon icon-UMLPackage'></span>dataAccessLayer</a></span>
+          <span class="label label-info"><a href='08bb0ec1fa71b9bfdc200503b2ee98d5.html'><span class='node-icon staruml-icon icon-UMLPackage'></span>service</a></span>
         
           <span>::</span>
-          <span class="label label-info"><a href='cf95da5f44bea546e6686f9dae1288b4.html'><span class='node-icon staruml-icon icon-UMLInterface'></span>I_CRUD</a></span>
+          <span class="label label-info"><a href='3c51149a72ea736e5f98fb958b69c756.html'><span class='node-icon staruml-icon icon-UMLInterface'></span>I_services</a></span>
         
       </section>
 
@@ -116,19 +116,11 @@
     <h3>Implementing Classifiers</h3>
     <ul class="nav nav-list">
         
-        <li><a href='796f19f47d5bc8ec9e69256b4b948e98.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoAllergene</a></li>
+        <li><a href='54f9723db38a7910613df2926a33d26b.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Search_engine</a></li>
         
-        <li><a href='ece409bf8eb9869496a891ad013ff47d.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoCategorie</a></li>
+        <li><a href='c2aa39c2af34a2214459e9bb1bcf5b74.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Parser</a></li>
         
-        <li><a href='3fe4f25beaa6b58f24f2afa106c08e7a.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoAdditif </a></li>
-        
-        <li><a href='9b1e5b8c41c94992744cefa80af6311c.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoProduit</a></li>
-        
-        <li><a href='08e07cccebdd546ec9e0239784c41713.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoNutriscore</a></li>
-        
-        <li><a href='69f722a511009010065f74684db81c1d.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoIngredient</a></li>
-        
-        <li><a href='940c04a46dd6108c205abcd2054a3b00.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoMarque</a></li>
+        <li><a href='383d2753ca7c678c3ea2f86686d35474.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Cleaner</a></li>
         
     </ul>
 </section>
@@ -178,25 +170,43 @@
           
           <tr>
             <td>public</td>
-            <td><a href="67c368edbbaa0968a69a05ed5567285c.html">supprimer()</a></td>
+            <td><a href="b17210931d50f30cc86b92153cac3cd4.html">search_AdditivesNbrInProduct();()</a></td>
             <td></td>
           </tr>
           
           <tr>
             <td>public</td>
-            <td><a href="9a97abf620a221dfa0dd91546f2cc75a.html">modifier()</a></td>
+            <td><a href="fe7ba34376d654e25df5a0af9b8c98d0.html">search_AllergensNbrInProduct();()</a></td>
             <td></td>
           </tr>
           
           <tr>
             <td>public</td>
-            <td><a href="1b2ab2f5f8107a940eca6dfd269e0fe6.html">lire()</a></td>
+            <td><a href="6c3eca05a302572fdf1b24a83702b1b2.html">search_IngredientsNbrInProduct();()</a></td>
             <td></td>
           </tr>
           
           <tr>
             <td>public</td>
-            <td><a href="a9df88f18547cf8f7af910d8d1730f41.html">ajouter()</a></td>
+            <td><a href="c04d6287cf5f34380882c1f755e1de00.html">search_BestProducts_byBrandAndCategorie();()</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="44638a243fdf78aa2fe106e963a6db77.html">search_BestProducts_byCategory();()</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="cd087f33bebda7b2c016034f9335b0f8.html">search_BestProducts_byBrand();()</a></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>public</td>
+            <td><a href="2720e2573b389177f53d46fd455cfd67.html">mapCsvFileToDatabase()</a></td>
             <td></td>
           </tr>
           
@@ -300,7 +310,7 @@
     
     <tr>
         <td>name</td>
-        <td>I_CRUD</td>
+        <td>I_services</td>
     </tr>
     
     
@@ -391,21 +401,13 @@
     <h3>Dependants</h3>
     <ul class="nav nav-list">
         
-        <li><a href='796f19f47d5bc8ec9e69256b4b948e98.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoAllergene</a></li>
-        
-        <li><a href='ece409bf8eb9869496a891ad013ff47d.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoCategorie</a></li>
-        
-        <li><a href='3fe4f25beaa6b58f24f2afa106c08e7a.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoAdditif </a></li>
-        
-        <li><a href='9b1e5b8c41c94992744cefa80af6311c.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoProduit</a></li>
-        
-        <li><a href='08e07cccebdd546ec9e0239784c41713.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoNutriscore</a></li>
-        
-        <li><a href='69f722a511009010065f74684db81c1d.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoIngredient</a></li>
-        
-        <li><a href='940c04a46dd6108c205abcd2054a3b00.html'><span class='node-icon staruml-icon icon-UMLClass'></span>DaoMarque</a></li>
+        <li><a href='f3e6a4f2f0ed014fd6bc563a95893eb1.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Ihm</a></li>
         
         <li><a href='54f9723db38a7910613df2926a33d26b.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Search_engine</a></li>
+        
+        <li><a href='c2aa39c2af34a2214459e9bb1bcf5b74.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Parser</a></li>
+        
+        <li><a href='383d2753ca7c678c3ea2f86686d35474.html'><span class='node-icon staruml-icon icon-UMLClass'></span>Cleaner</a></li>
         
     </ul>
 </section>
@@ -421,21 +423,13 @@
     <h3>Relationships</h3>
     <ul class="nav nav-list">
         
-        <li><a href='8a122650e4a6592cdd002155ea9fb0c3.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(DaoAllergene→I_CRUD)</a></li>
+        <li><a href='ce5a32c6de3879fe5f260f83566f559f.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(Ihm→I_services)</a></li>
         
-        <li><a href='d6902b938ce16c302fe9e0999d51c065.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(DaoCategorie→I_CRUD)</a></li>
+        <li><a href='cf200a2a9ec74e1df83f721526df5b66.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(Search_engine→I_services)</a></li>
         
-        <li><a href='1e02764758fd92ac81c2f2dfb2e7ea9e.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(DaoAdditif →I_CRUD)</a></li>
+        <li><a href='8af0a9d9ec3c2881744a901703b0854e.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(Parser→I_services)</a></li>
         
-        <li><a href='47b7e4ec2c920804c4f8d0714d0f94a8.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(DaoProduit→I_CRUD)</a></li>
-        
-        <li><a href='7178aacb8e5f95a788d81a378effc9dd.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(DaoNutriscore→I_CRUD)</a></li>
-        
-        <li><a href='15227b298d1a24585ff4d37e0ee99b5d.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(DaoIngredient→I_CRUD)</a></li>
-        
-        <li><a href='5c13810f5b17094ae8f2ae918a6b4d17.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(DaoMarque→I_CRUD)</a></li>
-        
-        <li><a href='2d8589af992c11d440fcae6cb04e22b8.html'><span class='node-icon staruml-icon icon-UMLDependency'></span>(Search_engine→I_CRUD)</a></li>
+        <li><a href='3a734c58036b86b64b7f47ee8b606682.html'><span class='node-icon staruml-icon icon-UMLInterfaceRealization'></span>(Cleaner→I_services)</a></li>
         
     </ul>
 </section>
