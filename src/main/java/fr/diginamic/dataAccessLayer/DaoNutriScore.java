@@ -18,11 +18,17 @@ public class DaoNutriScore implements I_Crud {
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("IBOOF-JPA");
     private final EntityManager em = emf.createEntityManager();
 
+    @Override
+    public Object lecture(String word) {
+
+        return null;
+    }
+
     @Transactional
     @Override
-    public void ajouter() {
+    public void ajouter(String nutriValueScore) {
         em.createNativeQuery("INSERT INTO NutriScore (valeurScore) VALUES (?)")
-                .setParameter(1, this.nutriscore.getValeurScore())
+                .setParameter(1, nutriValueScore)
                 .executeUpdate();
     }
 

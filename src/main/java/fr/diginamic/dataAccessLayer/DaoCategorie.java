@@ -19,11 +19,17 @@ public class DaoCategorie implements I_Crud {
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("IBOOF-JPA");
     private final EntityManager em = emf.createEntityManager();
 
+    @Override
+    public Object lecture(String categorieName) {
+
+        return null;
+    }
+
     @Transactional
     @Override
-    public void ajouter() {
+    public void ajouter(String categorieName) {
         em.createNativeQuery("INSERT INTO Categorie (nom_categorie) VALUES (?)")
-                .setParameter(1, this.categorie.getNom_categorie())
+                .setParameter(1, categorieName)
                 .executeUpdate();
     }
 

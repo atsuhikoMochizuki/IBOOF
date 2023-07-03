@@ -3,8 +3,11 @@ package fr.diginamic.dataAccessLayer;
 import jakarta.transaction.Transactional;
 
 public interface I_Crud {
+
     @Transactional
-    void ajouter();
+    Object lecture(String word);
+    @Transactional
+    void ajouter(String word);
 
     @Transactional
     void modifier();

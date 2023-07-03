@@ -2,6 +2,7 @@ package fr.diginamic.service;
 
 public interface I_services_search {
 
+    String getMarque(String marque);
     void search_BestProducts_byBrand();
     void search_BestProducts_byCategory();
     void search_BestProducts_byBrandAndCategorie();

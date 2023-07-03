@@ -13,7 +13,7 @@ public class Marque {
     //Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_marque")
     private Integer id_marque;
     @Column
     private String nom_marque;

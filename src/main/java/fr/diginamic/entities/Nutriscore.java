@@ -12,7 +12,7 @@ public class Nutriscore {
     //Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_nutriscore")
     private Integer id_nutriscore;
     @Column
     private String valeurScore;

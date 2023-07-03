@@ -13,7 +13,7 @@ public class Allergene {
     //Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_allergene")
     private Integer id_allergene;
     @Column
     private String nom_allergene;

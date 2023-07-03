@@ -19,11 +19,17 @@ public class DaoAllergene implements I_Crud {
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("IBOOF-JPA");
     private final EntityManager em = emf.createEntityManager();
 
+    @Override
+    public Object lecture(String word) {
+
+        return null;
+    }
+
     @Transactional
     @Override
-    public void ajouter() {
+    public void ajouter(String allergeneName) {
         em.createNativeQuery("INSERT INTO Allergene (nom_allergene) VALUES (?)")
-                .setParameter(1, this.allergene.getNom_allergene())
+                .setParameter(1, allergeneName)
                 .executeUpdate();
     }
 

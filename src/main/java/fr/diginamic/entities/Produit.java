@@ -2,6 +2,7 @@ package fr.diginamic.entities;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -11,7 +12,7 @@ public class Produit {
     // Attributs propres aux produits
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_produit")
     private Integer id_produit;
     @Column
     private String nom_produit;
@@ -71,34 +72,45 @@ public class Produit {
     @JoinColumn(name = "NUTRISCORE_ID")
     private Nutriscore nutriscore;
 
+    @ManyToOne
+    @JoinColumn(name = "MARQUE_ID")
+    private Marque marque;
+
     //Attributs relations n-n
     @ManyToMany
     @JoinTable(name = "JOIN_TABLE_MARQUE_PRODUIT",
-            joinColumns = @JoinColumn(name = "ID_PRODUIT", referencedColumnName = "id_produit"),
-            inverseJoinColumns = @JoinColumn(name = "ID_MARQUE", referencedColumnName = "id_marque")
+            joinColumns = @JoinColumn(name = "id_produit", referencedColumnName = "ID_PRODUIT"),
+            inverseJoinColumns = @JoinColumn(name = "id_marque", referencedColumnName = "ID_MARQUE")
     )
     private Set<Marque> marques;
 
     @ManyToMany
     @JoinTable(name = "JOIN_TABLE_ALLERGENE_PRODUIT",
-            joinColumns = @JoinColumn(name = "ID_PRODUIT", referencedColumnName = "id_produit"),
-            inverseJoinColumns = @JoinColumn(name = "ID_ALLERGENE", referencedColumnName = "id_allergene")
+            joinColumns = @JoinColumn(name = "id_produit", referencedColumnName = "ID_PRODUIT"),
+            inverseJoinColumns = @JoinColumn(name = "id_allergene", referencedColumnName = "ID_ALLERGENE")
     )
     private Set<Allergene> allergenes;
 
     @ManyToMany
     @JoinTable(name = "JOIN_TABLE_ADDITIF_PRODUIT",
-            joinColumns = @JoinColumn(name = "ID_PRODUIT", referencedColumnName = "id_produit"),
-            inverseJoinColumns = @JoinColumn(name = "ID_ADDITIF", referencedColumnName = "id_additif")
+            joinColumns = @JoinColumn(name = "id_produit", referencedColumnName = "ID_PRODUIT"),
+            inverseJoinColumns = @JoinColumn(name = "id_additif", referencedColumnName = "ID_ADDITIF")
     )
     private Set<Additif> additifs;
 
     @ManyToMany
     @JoinTable(name = "JOIN_TABLE_INGREDIENT_PRODUIT",
-            joinColumns = @JoinColumn(name = "ID_PRODUIT", referencedColumnName = "id_produit"),
-            inverseJoinColumns = @JoinColumn(name = "ID_INGREDIENT", referencedColumnName = "id_ingredient")
+            joinColumns = @JoinColumn(name = "id_produit", referencedColumnName = "ID_PRODUIT"),
+            inverseJoinColumns = @JoinColumn(name = "id_ingredient", referencedColumnName = "ID_INGREDIENT")
     )
     private Set<Ingredient> ingredients;
+
+    {
+        additifs = new HashSet<>();
+        allergenes = new HashSet<>();
+        ingredients = new HashSet<>();
+        marques = new HashSet<>();
+    }
 
     //Constructeurs
     public Produit() {

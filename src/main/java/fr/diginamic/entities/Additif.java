@@ -12,7 +12,7 @@ public class Additif {
     //Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_additif")
     private Integer id_additif;
     @Column
     private String nom_additif;

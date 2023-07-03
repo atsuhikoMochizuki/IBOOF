@@ -7,9 +7,14 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 
+import java.util.List;
+
 public class DaoMarque implements I_Crud {
 
     private Marque marque;
+
+    public DaoMarque() {
+    }
 
     public DaoMarque(Marque marque) {
         this.marque = marque;
@@ -21,9 +26,16 @@ public class DaoMarque implements I_Crud {
 
     @Transactional
     @Override
-    public void ajouter() {
+    public String lecture(String marque) {
+        return (String) em.createNativeQuery("SELECT marq.nom_marque FROM Marque AS marq WHERE marq.nom_marque = ?", Marque.class)
+                .setParameter(1, marque).getSingleResult();
+    }
+
+    @Transactional
+    @Override
+    public void ajouter(String marque) {
         em.createNativeQuery("INSERT INTO Marque (nom_marque) VALUES (?)")
-                .setParameter(1, this.marque.getNom_marque())
+                .setParameter(1, marque)
                 .executeUpdate();
     }
 

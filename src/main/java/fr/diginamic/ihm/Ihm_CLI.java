@@ -2,7 +2,9 @@ package fr.diginamic.ihm;
 
 import fr.diginamic.service.I_IboofManager;
 import fr.diginamic.mochizukiTools.Utils;
+import fr.diginamic.service.I_services_search;
 import fr.diginamic.service.IboofManager;
+import fr.diginamic.service.Services_search;
 
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -47,6 +49,8 @@ public class Ihm_CLI {
         Utils.clearConsole();
         System.out.println("\n" + MENU);
 
+        I_services_search services = new Services_search();
+
         while (true) {
             System.out.println("Entrez votre choix:");
             String choice = scanner.nextLine();
@@ -55,9 +59,9 @@ public class Ihm_CLI {
                     Utils.msgPrompt("Entrez votre marque:");
                     choix1 = scanner.nextLine();
                     Utils.msgInfo("Lancement de la recherche");
-//                    if (services.getMarque().equalsIgnoreCase(String.valueOf(choix1))) {
-//                        services.search_BestProducts_byBrand();
-//                    }
+                    services.getMarque(choix1);
+                    services.search_BestProducts_byBrand();
+
                 }
 
                 case "2" -> {

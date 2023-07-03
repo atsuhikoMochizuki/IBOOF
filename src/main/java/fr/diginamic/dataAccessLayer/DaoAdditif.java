@@ -19,11 +19,17 @@ public class DaoAdditif implements I_Crud {
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("IBOOF-JPA");
     private final EntityManager em = emf.createEntityManager();
 
+    @Override
+    public Object lecture(String additif) {
+
+        return null;
+    }
+
     @Transactional
     @Override
-    public void ajouter() {
+    public void ajouter(String additif) {
         em.createNativeQuery("INSERT INTO Additif (nom_additif) VALUES (?)")
-                .setParameter(1, this.additif.getNom_additif())
+                .setParameter(1, additif)
                 .executeUpdate();
     }
 

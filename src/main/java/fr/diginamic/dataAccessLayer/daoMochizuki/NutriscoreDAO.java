@@ -16,7 +16,6 @@ public class NutriscoreDAO implements INutriscoreDAO {
             em.getTransaction().begin();
             em.persist(nutriscore);
             em.getTransaction().commit();
-ff
         }
     }
 

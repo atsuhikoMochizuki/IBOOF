@@ -13,7 +13,7 @@ public class Categorie {
     //Attributs
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_categorie")
     private Integer id_categorie;
     @Column
     private String nom_categorie;
